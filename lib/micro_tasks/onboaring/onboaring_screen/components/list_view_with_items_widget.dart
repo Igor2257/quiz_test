@@ -7,7 +7,7 @@ class ListViewWithItemsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemCount: list.length,itemBuilder: (context, position) {
+    return ListView.builder(shrinkWrap: true,itemCount: list.length,itemBuilder: (context, position) {
       return SelectableItemWidget(item: list[position]);
     });
   }

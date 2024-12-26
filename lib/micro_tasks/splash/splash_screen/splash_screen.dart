@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quiz_test/bloc/login_bloc/login_bloc.dart';
+import 'package:quiz_test/micro_tasks/login/login_bloc/login_bloc.dart';
 import 'package:quiz_test/utils/navigation/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {

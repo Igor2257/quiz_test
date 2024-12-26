@@ -7,13 +7,37 @@ class OnboardingScreenView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<OnboardingBloc, OnboardingState>(
       builder: (context, state) {
-        return PageView(
-          physics: const NeverScrollableScrollPhysics(),
-          children: state.perPageItems
-              .map((e) => ListViewWithItemsWidget(
-                    list: e,
-                  ))
-              .toList(),
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Expanded(
+                child: PageView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: state.perPageItems
+                      .map((e) => Column(
+                            children: [
+                              ListViewWithItemsWidget(
+                                list: e,
+                              ),
+                              Text(
+                                e.first.question,
+                                style: const TextStyle(fontSize: 32),
+                              ),
+                            ],
+                          ))
+                      .toList(),
+                ),
+              ),
+              const PageIndicatorWidget(),
+              const Row(
+                children: [
+                  Spacer(),
+                  NextPageButtonWidget(),
+                ],
+              )
+            ],
+          ),
         );
       },
     );

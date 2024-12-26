@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:quiz_test/domain/repository/login_repository/login_repository_impl.dart';
+import 'package:quiz_test/micro_tasks/login/login_repository/login_repository_impl.dart';
 import 'package:quiz_test/use_case/entity/result.dart';
 
 import 'login_use_case.dart';

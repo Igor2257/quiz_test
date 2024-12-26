@@ -20,6 +20,8 @@ class SelectAnswerOnQuestion extends OnboardingEvent{
   SelectAnswerOnQuestion({required this.question, required this.item});
 }
 
-
+class GenerateQuiz extends OnboardingEvent{
+  GenerateQuiz();
+}
 
 

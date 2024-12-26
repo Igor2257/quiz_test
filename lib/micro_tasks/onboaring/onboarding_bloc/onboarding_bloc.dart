@@ -14,7 +14,7 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
     on<LoadData>(_onLoadData);
     on<ChangePage>(_onChangePage);
     on<SelectAnswerOnQuestion>(_onSelectAnswerOnQuestion);
-    on<OnboardingEvent>(_on);
+    on<GenerateQuiz>(_onGenerateQuiz);
   }
 
   final _onboardingUseCaseImpl = OnboardingUseCaseImpl.instance;
@@ -43,6 +43,7 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
   FutureOr<void> _onChangePage(
       ChangePage event, Emitter<OnboardingState> emit) async {
     if (state.page == state.perPageItems.length - 1) {
+      add(GenerateQuiz());
       return;
     }
     emit(
@@ -72,5 +73,8 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
 
     // Обновляем состояние
     emit(state.copyWith(perPageItems: perPageItems));
+  }
+
+  FutureOr<void> _onGenerateQuiz(GenerateQuiz event, Emitter<OnboardingState> emit) {
   }
 }

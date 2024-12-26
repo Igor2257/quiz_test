@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:video_audio_booth/use_case/entity/result.dart';
+import 'package:quiz_test/use_case/entity/result.dart';
 
 import 'login_data.dart';
 

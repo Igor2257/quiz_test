@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:video_audio_booth/data/login_data/login_data_impl.dart';
-import 'package:video_audio_booth/use_case/entity/result.dart';
+import 'package:quiz_test/micro_tasks/login/login_data/login_data_impl.dart';
+import 'package:quiz_test/use_case/entity/result.dart';
 
 import 'login_repository.dart';
 

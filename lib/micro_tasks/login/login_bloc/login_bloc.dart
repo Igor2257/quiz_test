@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:video_audio_booth/domain/services/auth_service.dart';
-import 'package:video_audio_booth/use_case/login_use_case/login_use_case_impl.dart';
+import 'package:quiz_test/domain/services/auth_service.dart';
+import 'package:quiz_test/micro_tasks/login/login_use_case/login_use_case_impl.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';
