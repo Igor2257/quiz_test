@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get_it/get_it.dart';
 import 'package:quiz_test/bloc/app_bloc/app_bloc.dart';
-import 'package:quiz_test/bloc/login_bloc/login_bloc.dart';
 import 'package:quiz_test/firebase_options.dart';
+import 'package:quiz_test/micro_tasks/login/login_bloc/login_bloc.dart';
 import 'package:quiz_test/utils/navigation/app_routes.dart';
 
 final getIt = GetIt.instance;

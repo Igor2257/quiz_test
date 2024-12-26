@@ -3,30 +3,33 @@ part of 'onboarding_bloc.dart';
 @immutable
 class OnboardingState {
   final List<SelectableItemEntity> allItems;
-  final List<SelectableItemEntity> perPageItems;
-
-  final String question;
+  final List<List<SelectableItemEntity>> perPageItems;
+  final Set<String> questions;
 
   final int page;
+  final PageController? pageController;
 
   const OnboardingState({
     this.allItems = const [],
     this.perPageItems = const [],
-    this.question = '',
+    this.questions = const {},
     this.page = 0,
+    this.pageController,
   });
 
   OnboardingState copyWith({
     List<SelectableItemEntity>? allItems,
-    List<SelectableItemEntity>? perPageItems,
-    String? question,
+    List<List<SelectableItemEntity>>? perPageItems,
+    Set<String>? questions,
     int? page,
+    PageController? pageController
   }) {
     return OnboardingState(
       allItems: allItems ?? this.allItems,
       perPageItems: perPageItems ?? this.perPageItems,
-      question: question ?? this.question,
+      questions: questions ?? this.questions,
       page: page ?? this.page,
+      pageController: pageController ?? this.pageController,
     );
   }
 }

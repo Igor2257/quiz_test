@@ -8,7 +8,18 @@ class LoadData extends OnboardingEvent {
 }
 
 class ChangePage extends OnboardingEvent {
-  final int page;
 
-  ChangePage({required this.page});
+
+  ChangePage();
 }
+
+class SelectAnswerOnQuestion extends OnboardingEvent{
+  final String question;
+  final SelectableItemEntity item;
+
+  SelectAnswerOnQuestion({required this.question, required this.item});
+}
+
+
+
+

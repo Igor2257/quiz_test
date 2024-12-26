@@ -1,9 +1,9 @@
 class SelectableItemEntity {
-  final int id;
+  final String id;
   final String text;
   final String question;
   final String iconPath;
-  final bool isSelected;
+  bool isSelected;
 
   SelectableItemEntity({
     required this.id,
